@@ -3,11 +3,7 @@
         <WorkInProgress/>
 
         <!-- Scrivere i dati dei posts -->
-        <div>
-            <ul>
-                <li v-for="elem in posts" :key="elem.id">{{elem.title}}</li>
-            </ul>
-        </div>
+        <PostsList :posts="posts"/>
 
     </div>
 </template>
@@ -15,12 +11,14 @@
 
 <script>
 
-import WorkInProgress from "../components/WorkInProgress.vue"
+import WorkInProgress from "../components/WorkInProgress.vue";
+import PostsList from "../components/posts/PostsList.vue";
 
 export default {
     name: "App",
     components: {
-        WorkInProgress
+        WorkInProgress,
+        PostsList
     },
 
     data(){

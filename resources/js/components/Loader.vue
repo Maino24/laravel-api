@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="spinner-border text-primary" role="status">
-            <span class="visually-hidden">Loading...</span> <!--al posto di loading dovrebbe stampare il cerchio che gira-->
+            <span class="visually-hidden">Loading...</span>
         </div>
     </div>
 </template>

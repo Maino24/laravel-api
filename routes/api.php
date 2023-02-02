@@ -17,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//Route::get('/posts', 'Api\PostController@index'); //le rotte che inserisco nel primo parametro di default viene aggiunto un prefisso che si chiama api (localhost:8000/api/posts)
+
+//namespace è il path che permette di recuperare il file rispettivamente come percorso
+Route::namespace('Api')->prefix('/posts')->group(function(){
+    Route::get('/', 'PostController@index');
+});

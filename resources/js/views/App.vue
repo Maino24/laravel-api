@@ -3,7 +3,7 @@
         <WorkInProgress/>
 
         <!-- Scrivere i dati dei posts -->
-        <PostsList :posts="posts"/>
+        <PostsList :posts="posts" :isLoading="isLoading"/>
 
     </div>
 </template>
@@ -23,7 +23,8 @@ export default {
 
     data(){
         return {
-            posts: []
+            posts: [],
+            isLoading: false,
         }
     },
 
@@ -33,10 +34,15 @@ export default {
 
     methods: {
         getPosts(){
+            this.isLoading = true
             axios.get('http://127.0.0.1:8000/api/posts')
                 .then(res => {
                     //console.log(res.data);
                     this.posts = res.data
+                }).catch(err => {
+                    console.log(err)
+                }).then(()=>{
+                    this.isLoading = false
                 })
         }
     }

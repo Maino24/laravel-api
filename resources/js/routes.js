@@ -1,11 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import { component } from 'vue/types/umd';
+
 
 Vue.use(VueRouter)
 
 //import componenti che fungono da pagine
 import AboutUs from './components/pages/AboutUs.vue';
+import Posts from './components/pages/posts/Posts.vue';
 
 const router = new VueRouter({ //quando utilizzo new instanzio il router di vue e lo abbino alla variabile router
     //scriverò tutti i miei path per le diverse pagine
@@ -15,6 +16,12 @@ const router = new VueRouter({ //quando utilizzo new instanzio il router di vue 
             path: '/about-us',
             name: 'about-us',
             component: AboutUs
+        },
+        {
+
+            path: '/posts',
+            name: 'posts',
+            component: Posts
         }
     ]
 });

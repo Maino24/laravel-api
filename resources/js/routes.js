@@ -5,8 +5,8 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 //import componenti che fungono da pagine
-import AboutUs from './components/pages/AboutUs.vue';
-import Posts from './components/pages/posts/Posts.vue';
+import AboutUs from './views/pages/AboutUs.vue';
+import PostsIndex from './views/pages/posts/PostsIndex.vue';
 
 const router = new VueRouter({ //quando utilizzo new instanzio il router di vue e lo abbino alla variabile router
     //scriverò tutti i miei path per le diverse pagine
@@ -21,7 +21,7 @@ const router = new VueRouter({ //quando utilizzo new instanzio il router di vue 
 
             path: '/posts',
             name: 'posts',
-            component: Posts
+            component: PostsIndex
         }
     ]
 });

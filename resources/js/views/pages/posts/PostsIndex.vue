@@ -1,7 +1,7 @@
 <template>
     <div>
         <WorkInProgress/>
-
+        <h1>SONO LA PAGINA DEI POSTS</h1>
         <!-- Scrivere i dati dei posts -->
         <PostsList/>
     </div>
@@ -9,7 +9,7 @@
 
 <script>
 
-import PostsList from "../../posts/PostsList.vue";
+import PostsList from "../../../components/posts/PostsList.vue";
 
 export default {
     name: "Posts",

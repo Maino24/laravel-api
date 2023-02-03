@@ -12,14 +12,14 @@
 
 import WorkInProgress from "../components/WorkInProgress.vue";
 import PostsList from "../components/posts/PostsList.vue";
-//import Pagination from "../components/posts/PostsList.vue";
+import Pagination from "../components/posts/PostsList.vue";
 
 export default {
     name: "App",
     components: {
         WorkInProgress,
         PostsList,
-        //Pagination
+        Pagination
     },
 
     data(){

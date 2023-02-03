@@ -22,5 +22,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 //namespace è il path che permette di recuperare il file rispettivamente come percorso
 Route::namespace('Api')->prefix('/posts')->group(function(){
+    //localhost:8000/api/posts
     Route::get('/', 'PostController@index');
+    //localhost:8000/api/posts/12
+    Route::get('/{id}', 'PostController@show');
 });

@@ -3,7 +3,18 @@
         <!-- Uso il loader -->
         <Loader v-if="isLoading" />
         <ul v-else-if="posts.length">
-            <li v-for="elem in posts" :key="elem.id">{{elem.title}}</li>
+            <li v-for="elem in posts" :key="elem.id">
+                <router-link :to="`/posts/${elem.id}`">
+                {{elem.title}}
+                </router-link>
+
+                <span v-if="elem.category">
+                    {{ elem.category.name }}
+                </span>
+                <ol>
+                    <li v-for="tag in elem.tags">{{ tag.name }}</li>
+                </ol>
+            </li>
         </ul>
         <p v-else>Non ci sono psts nel db</p>
 
